@@ -1,4 +1,4 @@
-package org.example.module4_1;
+package org.example.module5_2;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,13 +25,18 @@ public class CustomWait {
     }
 
 
-    public WebElement clickable(By loc) {
-        LOG.info("Ждём " + secondsToWait + " секунд и элемент станет кликабельным: " + loc);
-        return wait.until(ExpectedConditions.elementToBeClickable(loc));
+    public WebElement clickable(WebElement el) {
+        LOG.info("Ждём " + secondsToWait + " секунд и элемент станет кликабельным: " + el);
+        return wait.until(ExpectedConditions.elementToBeClickable(el));
     }
 
-    public WebElement visible(By loc) {
-        LOG.info("Ждём " + secondsToWait + " секунд и элемент станет видимым: " + loc);
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(loc));
+    public WebElement visible(WebElement el) {
+        LOG.info("Ждём " + secondsToWait + " секунд и элемент станет видимым: " + el);
+        return wait.until(ExpectedConditions.visibilityOf(el));
+    }
+
+    public void staleness(WebElement el) {
+        LOG.info("Ждём устаревания элемента " + secondsToWait + " секунд: " + el.toString());
+        wait.until(ExpectedConditions.stalenessOf(el));
     }
 }

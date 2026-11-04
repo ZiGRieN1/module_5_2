@@ -1,5 +1,8 @@
-package org.example.module4_1;
+package org.example.module5_2.tests;
 
+import org.example.module5_2.pages.SearchFieldPage;
+import org.example.module5_2.pages.SeleniumPage;
+import org.example.module5_2.pages.SiteListPage;
 import org.junit.jupiter.api.*;
 
 import org.openqa.selenium.By;
@@ -13,9 +16,9 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.example.module4_1.CustomWait.customWait;
+import static org.example.module5_2.CustomWait.customWait;
 
-public class MainPageTest {
+public class BingSearchTest {
     private WebDriver driver;
 
     @BeforeEach
@@ -37,21 +40,15 @@ public class MainPageTest {
 
     @Test
     public void search() {
+        SearchFieldPage searchFieldPage = new SearchFieldPage(driver);
         String input = "Selenium";
-        By linkSite = By.xpath("//div[@class='tpmeta']/div/cite"); //заменил локатор, т.к. изначально задание выполнялось при включенном впн и bing видимо настроился под страну их впн
-        WebElement searchField = customWait(driver, 10).clickable(By.xpath("//input[@id = 'sb_form_q']"));
-        searchField.sendKeys(input);
-        searchField.submit();
-        List<WebElement> results = driver.findElements(linkSite);
-        results.set(0, customWait(driver, 10).visible(linkSite));
-        clickSearch(results, 0);
-        ArrayList tabs = new ArrayList<>(driver.getWindowHandles());
-        if (tabs.size() > 1) driver.switchTo().window(tabs.get(1).toString());
-        customWait(driver, 5).visible(By.xpath("//h2[contains(text(),'Install Selenium and run your first script')]"));
+        searchFieldPage.click(input,10);
+        SiteListPage siteListPage = new SiteListPage(driver);
+        siteListPage.clickSearch(0,10);
+        SeleniumPage seleniumPage = new SeleniumPage(driver);
+        customWait(driver, 5).visible(seleniumPage.getTitle());
         Assertions.assertEquals(driver.getCurrentUrl(), "https://www.selenium.dev/", "URL не совпадает");
     }
 
-    public void clickSearch(List<WebElement> results, int num) {
-        results.get(num).click();
-    }
+
 }
