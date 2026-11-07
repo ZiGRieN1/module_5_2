@@ -1,6 +1,5 @@
 package org.example.module5_2;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,10 +10,10 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 
 public class CustomWait {
+
     private WebDriverWait wait;
     private final int secondsToWait;
     private final Logger LOG = LoggerFactory.getLogger(CustomWait.class);
-
     public static CustomWait customWait(WebDriver driver, int seconds) {
         return new CustomWait(driver, seconds);
     }
@@ -23,7 +22,6 @@ public class CustomWait {
         secondsToWait = seconds;
         wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
     }
-
 
     public WebElement clickable(WebElement el) {
         LOG.info("Ждём " + secondsToWait + " секунд и элемент станет кликабельным: " + el);
