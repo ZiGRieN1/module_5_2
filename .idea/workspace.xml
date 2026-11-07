@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33a8097a-2fee-4b5b-a637-253562fcb303" name="Changes" comment="Модуль 4_9&#10;delete files">
+    <list default="true" id="33a8097a-2fee-4b5b-a637-253562fcb303" name="Changes" comment="Модуль 5_2">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module_4_9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/module4_1/CustomWait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/module5_2/CustomWait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/module4_1/MainPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/module5_2/tests/BingSearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +49,18 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ZiGRieN1/module_4_9.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/ZiGRieN1/module_5_2.git&quot;,
     &quot;accountId&quot;: &quot;98bc43b3-0c29-4e50-9f05-ff1739d17104&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;ZiGRieN1&quot;,
+    &quot;repository&quot;: &quot;module_5_2&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -75,6 +83,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.BingSearchTest.search.executor": "Run",
     "JUnit.MainPageTest.search.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -82,7 +91,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "module__5__2",
     "last_opened_file_path": "D:/AQA/4_9/pom.xml",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RunManager">
@@ -140,13 +149,22 @@
       <option name="project" value="LOCAL" />
       <updated>1793342820622</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Модуль 5_2">
+      <option name="closed" value="true" />
+      <created>1793777594704</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1793777594704</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Модуль 4_9" />
     <MESSAGE value="Модуль 4_9&#10;Переписан customWait и тест" />
     <MESSAGE value="Модуль 4_9&#10;delete files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Модуль 4_9&#10;delete files" />
+    <MESSAGE value="Модуль 5_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Модуль 5_2" />
   </component>
 </project>
